@@ -1,0 +1,22 @@
+:root {
+  --cinder: #23292e;
+  --cavernPink: #dfb3ae;
+  --porcelain: #ddded9;
+  --equator: #e4b6c2;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  background: transparent;
+}
+
+body {
+  margin: 0;
+  background-color: #ddded9;
+  display: flex;
+  flex-direction: column;
+}
