@@ -57,12 +57,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .timer-text-1 {
   font-family: "Great Vibes", cursive;
   font-size: 5em;
-  color: var(--cinder);
+  color: var(--red6);
   padding: 5px;
   display: flex;
   align-content: center;
@@ -73,6 +74,22 @@
 .timer-text-2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
+  color: var(--red6);
+}
+
+.timer-text-3 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  margin-bottom: 20px;
+  color: var(--red5);
+  font-weight: bolder;
+  font-size: 1.75em;
+}
+
+.timer-text-4 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  color: var(--red5);
 }
 
 .flower1 {
@@ -84,8 +101,18 @@
 .photo1 {
   flex: 0.5;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.slideshow-container {
+  height: 100vh;
+  width: 50%;
+}
+
+.frames {
+  width: 800px !important;
 }
 
 .groomText {
@@ -97,7 +124,7 @@
 }
 
 .photo2 {
-  width: 33%;
+  width: 25%;
 }
 
 .events {
@@ -111,17 +138,18 @@
   padding-top: 20px;
   display: flex;
   justify-content: space-evenly;
-  gap: 40px;
+  gap: 30px;
 }
 
 .unit-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #c7c7c5;
-  padding: 5px;
-  width: 120px;
-  border-radius: 20px;
+  justify-content: center;
+  background: url(./Components/Art-Assets/clock-bg.png) center center/cover
+    no-repeat local;
+  width: 140px;
+  height: 140px;
 }
 
 .people-text {
@@ -134,7 +162,7 @@
 .name-text-1 {
   font-family: "Great Vibes", cursive;
   font-size: 5em;
-  color: #5e2626;
+  color: var(--red5);
   padding: 5px;
   display: flex;
   align-content: center;
@@ -153,7 +181,7 @@
 .name-text-2 {
   font-family: "Great Vibes", cursive;
   font-size: 3em;
-  color: #5e2626;
+  color: var(--red5);
   padding: 5px;
   display: flex;
   align-content: center;
@@ -169,12 +197,16 @@
   justify-content: center;
   border-radius: 20px;
 
-  background: rgba(221, 222, 217, 0.25);
+  /* background: rgba(221, 222, 217, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18); */
+}
+
+.event {
+  background-color: aqua;
 }
 
 @media all and (max-width: 767px) {
@@ -254,4 +286,89 @@
   .flower3 {
     width: 50%;
   }
+}
+
+.slideshow-image {
+  width: 100%;
+}
+
+/* // Add-on */
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 50px;
+  margin: 0;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(131.83deg, #fffafa 0%, #fff7f7 99.21%);
+  width: 100%;
+  text-align: center;
+  border-radius: 16px;
+  position: relative;
+  padding: 10px;
+}
+
+.item:not(:last-child) {
+  margin-right: 100px;
+}
+.item::before {
+  position: absolute;
+  content: "";
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background-image: linear-gradient(
+    312.25deg,
+    #ffc4bc 0%,
+    rgba(255, 255, 255, 0) 66.19%
+  );
+  z-index: -1;
+  border-radius: 18px;
+}
+
+.inner {
+  background-color: var(--red1);
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 40px 80px #fbe4e0;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.name {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hyprLink {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  color: var(--red6);
+  text-decoration: none;
+  border: 2px solid var(--red5);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.hyprLink:hover {
+  color: var(--red1);
+  background-color: var(--red6);
+}
+
+.hyprLink:active {
+  color: var(--red1);
+  background-color: var(--red6);
 }

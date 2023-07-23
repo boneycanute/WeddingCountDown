@@ -3,6 +3,12 @@
   --cavernPink: #dfb3ae;
   --porcelain: #ddded9;
   --equator: #e4b6c2;
+  --red1: #fff8f8;
+  --red2: #fde0e0;
+  --red3: #f4c1c1;
+  --red4: #fdaaaa;
+  --red5: #f97c7c;
+  --red6: #ee6969;
 }
 
 * {
@@ -16,7 +22,7 @@
 
 body {
   margin: 0;
-  background-color: #ddded9;
+  background-color: var(--red1);
   display: flex;
   flex-direction: column;
 }

@@ -31,7 +31,7 @@ function Timer() {
   return (
     <div className="timer">
       <p className="timer-text-1">
-        <span>Elizabeth </span>
+        <span>Elizabath </span>
         <span>and </span>
         <span>Emmanuel</span>
       </p>

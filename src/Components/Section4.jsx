@@ -14,8 +14,8 @@ function Section4() {
       <div className="calendarContainer">
         <div className="calendar">
           <div className="calendar__picture">
-            <h2>28, Thursday</h2>
-            <h3>December</h3>
+            <h2 className="text"> 28, Thursday</h2>
+            <h3 className="text">December</h3>
           </div>
           <div className="calendar__date">
             <div className="calendar__day">Su</div>
