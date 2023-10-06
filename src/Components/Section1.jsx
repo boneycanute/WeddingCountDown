@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Timer from "./Timer";
 import extraFlower from "../assets/images/Ziak.gif";
 import Photo1 from "./Photo1";

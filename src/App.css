@@ -31,7 +31,7 @@
 .saveText {
   font-family: "Great Vibes", cursive;
   font-size: 6em;
-  color: var(--cinder);
+  color: var(--red6);
   text-align: center;
   align-self: center;
   display: flex;
@@ -89,7 +89,7 @@
 .timer-text-4 {
   font-family: "Montserrat", sans-serif;
   margin: 0;
-  color: var(--red5);
+  color: var(--red6);
 }
 
 .flower1 {
@@ -128,10 +128,61 @@
 }
 
 .events {
-  display: flex;
   width: 100%;
   height: 100%;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+
+.outImage1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 15%;
+}
+
+.outImage3 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 15%;
+}
+
+.outImage2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 15%;
+}
+
+.outImage4 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 15%;
+}
+
+.event {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid var(--red6);
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .clock {
@@ -180,13 +231,14 @@
 
 .name-text-2 {
   font-family: "Great Vibes", cursive;
-  font-size: 3em;
+  font-size: 2em;
   color: var(--red5);
   padding: 5px;
   display: flex;
   align-content: center;
   gap: 15px;
   margin: 0;
+  text-align: center;
 }
 
 .event-container {
@@ -205,140 +257,14 @@
   border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
-.event {
-  background-color: aqua;
-}
-
-@media all and (max-width: 767px) {
-  .section1 {
-    flex-direction: column;
-    padding-top: 40px;
-  }
-
-  .section2 {
-    flex-direction: column;
-  }
-
-  .section4 {
-    flex-direction: column;
-  }
-
-  .events {
-    flex-direction: column;
-  }
-
-  .timer-text-1 {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-  }
-
-  .saveText {
-    font-size: 60px;
-  }
-
-  .calendarContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(1);
-  }
-
-  .name-text-1 {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-  }
-
-  .name-text-2 {
-    font-size: 2em;
-  }
-
-  .clock {
-    gap: 10px;
-  }
-
-  .unit-container {
-    width: 50px;
-    padding: 15px;
-    border-radius: 20px;
-  }
-
-  .extra-flower {
-    width: 100px;
-  }
-
-  .timer-text-2 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 01em;
-    padding-top: 30px;
-  }
-
-  .unit-container .timer-text-2 {
-    padding-top: 0;
-    /* font-family: "Great Vibes", cursive; */
-  }
-  .flower2 {
-    width: 50%;
-  }
-  .flower3 {
-    width: 50%;
-  }
-}
-
 .slideshow-image {
   width: 100%;
 }
 
 /* // Add-on */
 
-.wrapper {
-  box-sizing: border-box;
-  padding: 50px;
-  margin: 0;
-}
-
-.items {
-  display: flex;
-  justify-content: center;
-}
-
-.item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(131.83deg, #fffafa 0%, #fff7f7 99.21%);
-  width: 100%;
-  text-align: center;
-  border-radius: 16px;
-  position: relative;
-  padding: 10px;
-}
-
-.item:not(:last-child) {
-  margin-right: 100px;
-}
-.item::before {
-  position: absolute;
-  content: "";
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
-  background-image: linear-gradient(
-    312.25deg,
-    #ffc4bc 0%,
-    rgba(255, 255, 255, 0) 66.19%
-  );
-  z-index: -1;
-  border-radius: 18px;
-}
-
 .inner {
   background-color: var(--red1);
-  width: 30vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -358,9 +284,10 @@
   font-size: 1.5em;
   color: var(--red6);
   text-decoration: none;
-  border: 2px solid var(--red5);
-  padding: 5px;
+  border: 1px solid var(--red5);
+  padding: 10px;
   border-radius: 10px;
+  margin-top: 20px;
 }
 
 .hyprLink:hover {
@@ -371,4 +298,117 @@
 .hyprLink:active {
   color: var(--red1);
   background-color: var(--red6);
+}
+
+@media all and (max-width: 767px) {
+  .section1 {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .section2 {
+    flex-direction: column;
+  }
+
+  .section4 {
+    flex-direction: column;
+  }
+
+  .events {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .event {
+    width: 350px;
+  }
+
+  .photo1 {
+    flex: 0;
+  }
+
+  .inner {
+    width: 100%;
+  }
+
+  .timer-text-1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    padding: 0;
+  }
+
+  .saveText {
+    font-size: 60px;
+  }
+
+  .calendarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+  }
+
+  .name-text-1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+  }
+
+  .name-text-2 {
+    font-size: 1.5em;
+  }
+
+  .clock {
+    gap: 10px;
+  }
+
+  .unit-container {
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+    border-radius: 20px;
+    gap: 5px;
+  }
+
+  .extra-flower {
+    width: 100px;
+  }
+
+  .timer-text-2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    padding-top: 10px;
+  }
+
+  .timer-text-3 {
+    font-size: 1.15em;
+    margin-bottom: 3px;
+  }
+
+  .timer-text-4 {
+    font-size: 0.7em;
+  }
+
+  .unit-container .timer-text-2 {
+    padding-top: 0;
+    /* font-family: "Great Vibes", cursive; */
+  }
+  .flower2 {
+    width: 50%;
+  }
+  .flower3 {
+    width: 50%;
+  }
+
+  .photo2 {
+    width: 75%;
+  }
+
+  .section3 {
+    height: 100%;
+  }
 }
