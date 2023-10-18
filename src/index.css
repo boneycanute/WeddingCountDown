@@ -7,8 +7,8 @@
   --red2: #fde0e0;
   --red3: #f4c1c1;
   --red4: #fdaaaa;
-  --red5: #f11a7b;
-  --red6: #f11a7b;
+  --red5: rgb(128, 0, 0);
+  --red6: rgb(128, 0, 0);
 }
 
 * {
@@ -23,7 +23,10 @@
 
 body {
   margin: 0;
-  /* background-color: var(--red1); */
   display: flex;
   flex-direction: column;
+}
+
+#root {
+  position: relative;
 }

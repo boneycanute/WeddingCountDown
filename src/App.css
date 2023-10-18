@@ -1,9 +1,10 @@
 .section1 {
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
+  margin-top: 60px;
 }
 
 .section2 {
@@ -14,7 +15,7 @@
 }
 
 .section3 {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +27,23 @@
   display: flex;
   justify-content: space-evenly;
   position: relative;
+}
+
+.Section5 {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  /* background-color: red; */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.Video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  filter: hue-rotate(270deg) blur(2px) opacity(25%);
 }
 
 .saveText {
@@ -44,11 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(1.35);
-}
-
-.section5 {
-  height: 100vh;
+  transform: scale(1.15);
 }
 
 .timer {
@@ -58,6 +72,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-left: 50px;
 }
 
 .timer-text-1 {
@@ -216,7 +231,8 @@
   color: var(--red5);
   padding: 5px;
   display: flex;
-  align-content: center;
+  align-self: center;
+  text-align: center;
   gap: 15px;
   margin: 0;
 }
@@ -332,6 +348,10 @@
     width: 100%;
   }
 
+  .timer {
+    margin-left: 0px;
+  }
+
   .timer-text-1 {
     flex-direction: column;
     justify-content: center;
@@ -410,5 +430,22 @@
 
   .section3 {
     height: 100%;
+  }
+
+  .Video {
+    /* object-fit: cover; */
+    height: 100%;
+    width: 100%;
+    filter: hue-rotate(270deg) blur(2px) opacity(55%);
+    /* transform: rotate(90deg); */
+  }
+
+  .redLayer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
 }
